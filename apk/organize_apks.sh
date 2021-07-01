@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# sudofox/hatena-app-archive
+# sudofox/rtteg
 # reorganize APKs based on package name, versionCode and versionName
 
 APKS=$(find -type f -name \*.apk)
