@@ -1,0 +1,211 @@
+@import "src/styles/global.scss";
+
+.popup-content {
+  max-width: 80vw;
+  min-width: 600px;
+  border-radius: 10px;
+  & > div > .content > .post-composer {
+    border: none;
+  }
+}
+
+.popup-content {
+  .post-box {
+    min-height: 180px;
+  }
+}
+
+.post-composer {
+  background-color: #ffffff;
+  width: 100%;
+  display: flex;
+  padding: 15px 18px;
+  position: relative;
+  border-radius: 10px;
+  &.is-in-popup {
+    padding-left: 0;
+    padding-right: 0;
+    .post-avatar {
+      left: 0;
+    }
+  }
+
+  .post-avatar {
+    cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 18px;
+    .avatar {
+      border: 1px solid #e8e9ea;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .post-box {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    textarea {
+      width: 100%;
+      border: 0;
+      resize: none;
+      background-color: transparent;
+      @include box-shadow(none !important);
+      margin: 0 10px;
+      padding: 0;
+      font-size: 19px;
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .preview-content {
+      margin-bottom: 12px;
+    }
+
+    .action-bar {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 17px 0 0 0;
+
+      .action-buttons {
+        margin-top: 0px;
+        margin-left: 10px;
+        button {
+          height: 36px;
+          min-width: 66px;
+          border-radius: 100px;
+          span {
+            color: white;
+          }
+        }
+        &.en button .MuiButton-label {
+          line-height: 16px;
+        }
+        &.zh,
+        &.tw {
+          button .MuiButton-label {
+            font-size: 17px;
+            line-height: 17px;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+          }
+        }
+      }
+      .text-length-limit {
+        text-align: right;
+        width: 80px;
+        margin-left: auto;
+        color: #657786;
+        &.is-exceed {
+          color: #f34545;
+        }
+      }
+    }
+
+    .metadata {
+      position: relative;
+      width: 100%;
+      border: 1px solid var(--border-color);
+      margin-bottom: 20px;
+
+      .img-container {
+        position: relative;
+
+        img {
+          max-width: 100%;
+        }
+      }
+
+      .content {
+        padding: 5px 10px;
+        .title {
+          font-size: 15px;
+          margin: 5px 0px;
+        }
+
+        .description {
+          color: var(--font-light-color);
+          word-break: break-word;
+          margin: 5px 0px;
+        }
+
+        .site-name {
+          color: var(--font-light-color);
+          margin: 5px 0px;
+        }
+      }
+
+      .remove {
+        position: absolute;
+
+        left: 5px;
+        top: 5px;
+
+        svg {
+          position: absolute;
+          font-size: 28px;
+          --fa-secondary-opacity: 1;
+          --fa-primary-color: white;
+          --fa-secondary-color: black;
+        }
+      }
+    }
+    .replay-tip {
+      color: #3261d8;
+      line-height: 19px;
+      font-size: 15px;
+      font-family: "Helvetica Neue";
+      font-weight: 400;
+      margin: 0 0 10px 10px;
+      display: inline-block;
+      img {
+        vertical-align: top;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.post-composer-divider {
+  background: #f8f9fb;
+  border-bottom: 1px solid #dfe1ea;
+  height: 9px;
+}
+
+.popup-content .post-composer-divider {
+  display: none;
+}
+
+.mobile-GBackTitle-with-post {
+  justify-content: space-between;
+  padding-right: 12px;
+  .action-buttons {
+    margin-top: 0;
+    button {
+      border-radius: 55px;
+      padding: 6px 16px;
+    }
+  }
+  .action-buttons.zh,
+  .action-buttons.tw {
+    min-width: 80px;
+    text-align: right;
+  }
+}
+
+.empty-space {
+  width: 100%;
+  min-height: 1px;
+}

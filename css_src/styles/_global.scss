@@ -1,0 +1,77 @@
+%border-box {
+  -webkit-box-sizing: border-box;
+  /* Chrome all / Safari all */
+  -moz-box-sizing: border-box;
+  /* Firefox all */
+  -ms-box-sizing: border-box;
+  /* IE 10+ */
+  box-sizing: border-box;
+  /* Likely future */
+}
+
+%clearfix {
+  clear: both;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+%prevent-user-select {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */
+}
+
+%ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@mixin transition($param) {
+  -webkit-transition: $param;
+  -moz-transition: $param;
+  -o-transition: $param;
+  transition: $param;
+}
+
+@mixin transform($param) {
+  -webkit-transform: $param;
+  -moz-transform: $param;
+  -o-transform: $param;
+  transform: $param;
+}
+
+@mixin opacity($param) {
+  -moz-opacity: $param;
+  -khtml-opacity: $param;
+  opacity: $param;
+}
+
+@mixin box-shadow($param) {
+  -webkit-box-shadow: $param;
+  -moz-box-shadow: $param;
+  box-shadow: $param;
+}
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: perspective(1px) translateY(-50%);
+  -ms-transform: perspective(1px) translateY(-50%);
+  transform: perspective(1px) translateY(-50%);
+}
+
+@mixin border-radius($param) {
+  -moz-border-radius: $param;
+  -webkit-border-radius: $param;
+  border-radius: $param;
+}

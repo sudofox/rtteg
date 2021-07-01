@@ -1,0 +1,141 @@
+/*
+ ******************************************************************
+ * 
+ * Dropdown menus. Top level .dropdown are for containers
+ * by the package react-simple-dropdown.
+ * 
+ ******************************************************************
+*/
+
+/* for the npmm react-simple-dropdown */
+/* style from: https://www.w3schools.com/css/css_dropdowns.asp */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Used by <DropdownContent>, but can add the callout classes above */
+.dropdown__content {
+  display: none;
+  background-color: white;
+  position: absolute;
+  width: 150px;
+  border: 1px solid var(--border-color);
+  z-index: 800;
+
+  @include box-shadow(var(--box-shadow-light));
+  @include border-radius(2px);
+
+  .menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    font-weight: 400;
+    @include transition(
+      all var(--transition-duration) var(--transition-timing-function)
+    );
+    cursor: pointer;
+
+    &:hover {
+      background-color: #eeeff3;
+    }
+
+    .active-icon {
+      display: none;
+      position: relative;
+      margin-left: 10px;
+      font-size: 16px;
+      color: var(--theme-color);
+    }
+
+    &.red {
+      color: var(--red-color);
+
+      &:hover {
+        background-color: var(--red-lighter-color);
+      }
+    }
+
+    &.active {
+      cursor: default;
+      color: var(--theme-color);
+      font-weight: 700;
+
+      &:hover {
+        background-color: unset;
+      }
+
+      .active-icon {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.dropdown--active .dropdown__content {
+  display: block;
+  flex-direction: column;
+}
+
+a.dropdown__trigger {
+  color: inherit;
+}
+
+.dropdown__item {
+  width: 100%;
+  padding: 5px 0px 5px 0px;
+}
+
+.dropdown__item__icon {
+  padding-right: 5px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.dropdown__item__desc {
+  padding: 0px 3px 5px 5px;
+  width: 100%;
+  color: black;
+  font-size: 1.3rem;
+}
+
+.dropdown__item__desc:hover {
+  width: 100%;
+  font-weight: bold;
+}
+
+.dropdown__menuitem {
+  width: 100%;
+  padding: 0px 0px 0px 0px;
+}
+
+.dropdown__menuitem__icon {
+  display: inline-block;
+  margin: auto;
+  padding: 4px 5px 4px 0px;
+  vertical-align: middle;
+  text-align: right;
+}
+
+.dropdown__menuitem__desc {
+  padding: 4px 3px 4px 5px;
+  margin: auto;
+  width: 100%;
+  color: black;
+  background-color: transparent;
+  font-size: 1.4rem;
+}
+
+/* Separator covers entire menu width, so padding is union of icon and desc */
+.dropdown__menuitem__sep {
+  padding: 4px 3px 4px 5px;
+  width: 100%;
+}
+
+.dropdown__menuitem__desc:hover {
+  width: 100%;
+  font-weight: bold;
+  color: white;
+  background-color: gray;
+}

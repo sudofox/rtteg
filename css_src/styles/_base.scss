@@ -1,0 +1,217 @@
+@import "src/styles/global.scss";
+
+html {
+  // all global CSS variables goes here
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "PingFang SC", Helvetica, Arial, sans-serif;
+
+  --theme-color: #11a1bf;
+  --theme-light-color: #e5f5ff;
+  --theme-lighter-color: #f1faff;
+  --theme-deep-color: #0f839b;
+
+  --red-color: rgb(180, 0, 0);
+  --red-lighter-color: rgb(255, 233, 233);
+
+  --border-color: #e3e9ee;
+  --border-deep-color: lightgray;
+
+  --transition-duration: 100ms;
+  --transition-timing-function: ease-in;
+
+  --font-color: #14171a;
+  --font-light-color: #6f8589;
+  --font-lighter-color: #d6d6d6;
+
+  --icon-color: #6e7187;
+  --icon-hover-color: var(--theme-color);
+  --icon-hover-background-color: var(--theme-lighter-color);
+  --icon-size: 22px;
+
+  --box-shadow: 0px 0px 50px #e8e8e8;
+  --box-shadow-light: 0px 3px 5px #00000023;
+
+  --box-shadow-color: #e8e8e8;
+  --box-shadow-light-color: #f3f3f3;
+
+  --font-size: 14px;
+
+  --input-height: 45px;
+  --input-border-color: lightgray;
+  --input-background-color: #f7f8f9;
+  --input-border-radius: 8px;
+  --input-border-radius-deep: 30px;
+  --input-border-radius-deeper: 54px;
+
+  --header-height: 60px;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+* {
+  box-sizing: border-box; // gap around the full screen
+  margin: 0;
+  padding: 0;
+}
+
+@mixin placeholder() {
+  font-family: var(--font-family);
+  color: rgb(170, 170, 170);
+  font-weight: 100;
+}
+
+::placeholder /* Chrome, Firefox, Opera, Safari 10.1+ */ {
+  @include placeholder();
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  @include placeholder();
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  @include placeholder();
+}
+
+.action-buttons {
+  display: block;
+  float: right;
+  margin-top: 30px;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+  --border-width: 2px;
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  border: none;
+  min-height: 45px;
+  padding: 0px 15px;
+  @include border-radius(var(--input-border-radius) !important);
+  @include transition(
+    background-color var(--transition-duration)
+      var(--transition-timing-function)
+  );
+
+  &:focus {
+    outline: none;
+  }
+
+  &.input-round {
+    @include border-radius(var(--input-border-radius-deeper) !important);
+  }
+}
+
+input[type="checkbox"] {
+  position: relative;
+  vertical-align: middle;
+  top: -1px;
+  --checkbox-size: 17px;
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+
+  + label {
+    position: relative;
+    margin-left: 7px;
+  }
+}
+
+textarea {
+  font-family: var(--font-family);
+}
+
+// dl, dt, dd
+dl {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  @include transition(
+    all var(--transition-duration) var(--transition-timing-function)
+  );
+
+  dt {
+    font-size: 14px;
+    color: #828282;
+    padding: 5px 8px 5px 0px;
+  }
+
+  dd {
+    input:not([type="checkbox"]):not([type="radio"]),
+    select,
+    textarea {
+      width: 100%;
+    }
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+
+  dl {
+    width: 50%;
+  }
+}
+
+// link
+a {
+  position: relative;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+}
+
+svg,
+.svg-inline--fa {
+  font-size: var(--icon-size);
+  color: var(--icon-color);
+}
+
+.icon {
+  --icon-padding-multiplier: 1.5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --size: calc(
+    var(--icon-size) * var(--icon-padding-multiplier)
+  ); // for all svg within a icon, we control the size of the svg by defining the size of the .icon class
+  width: var(--size);
+  height: var(--size);
+
+  cursor: pointer;
+  @include transition(
+    all var(--transition-duration) var(--transition-timing-function)
+  );
+
+  svg {
+    font-size: calc(
+      var(--size) / var(--icon-padding-multiplier)
+    ); // size / 1.5 should = to whatever the svg font-size is above (currently 24px)
+  }
+}
+
+.emoji-picker-react .emoji.has-skin-variation::before {
+  background-color: transparent !important;
+}
+
+.notifmesage-with-link {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  .toastlink {
+    color: #0f6cf6;
+    margin-left: 24px;
+    margin-right: -10px;
+    font-weight: 900;
+  }
+}
