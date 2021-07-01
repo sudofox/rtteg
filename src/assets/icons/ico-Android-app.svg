@@ -1,0 +1,38 @@
+var _path;
+
+var _excluded = ["title", "titleId"];
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+import * as React from "react";
+
+function SvgIcoAndroidApp(_ref, svgRef) {
+  var title = _ref.title,
+      titleId = _ref.titleId,
+      props = _objectWithoutProperties(_ref, _excluded);
+
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    width: 18,
+    height: 19,
+    viewBox: "0 0 18 19",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    clipRule: "evenodd",
+    d: "M4 0.589355C1.79086 0.589355 0 2.38022 0 4.58936V14.5894C0 16.7985 1.79086 18.5894 4 18.5894H14C16.2091 18.5894 18 16.7985 18 14.5894V4.58936C18 2.38022 16.2091 0.589355 14 0.589355H4ZM4 7.87759C4 7.4328 4.33686 7.07311 4.75083 7.07311L4.75139 7.0736C5.16633 7.0736 5.50222 7.43378 5.50222 7.87707V11.0152C5.50222 11.46 5.16536 11.8197 4.75083 11.8197C4.33639 11.8197 4 11.46 4 11.0158V7.87759ZM13.0603 7.87709C13.0603 7.4328 13.3967 7.07311 13.8117 7.07311V7.0736C14.2261 7.0736 14.5625 7.43378 14.5625 7.87707V11.0147C14.5625 11.4595 14.2261 11.8192 13.8111 11.8192C13.3972 11.8192 13.0603 11.4595 13.0603 11.0152V7.87709ZM6.53962 13.4497C6.2165 13.4497 5.95421 13.1742 5.95421 12.833H5.95215V7.09782H12.6362V12.833C12.6362 13.1742 12.3734 13.4497 12.0507 13.4497H11.3811V15.1965C11.3811 15.6409 11.0452 16 10.6302 16C10.2163 16 9.87942 15.6403 9.87942 15.1965V13.4497H8.71049V15.1965C8.71049 15.6409 8.37416 16 7.95965 16C7.54519 16 7.20882 15.6403 7.20882 15.1965V13.4497H6.53962ZM11.483 3.18356L10.8656 4.12529L10.8651 4.12585V4.12637H10.8646C11.8458 4.60695 12.5342 5.52087 12.6225 6.58668H5.93898C6.02626 5.52032 6.71522 4.60752 7.69634 4.12637L7.07946 3.18248C7.04293 3.12626 7.05152 3.05316 7.09973 3.01793C7.14794 2.9832 7.21646 3.00057 7.25347 3.0558L7.89471 4.03748C8.31734 3.86189 8.78664 3.76461 9.28122 3.76461C9.75616 3.76343 10.2269 3.85624 10.6683 4.03804L11.31 3.05735C11.3461 3.00214 11.4151 2.98428 11.4627 3.01901C11.5104 3.05367 11.5196 3.12733 11.483 3.18356ZM7.50154 5.22428C7.50014 5.43755 7.66569 5.61165 7.87136 5.61342V5.61393C8.07537 5.61393 8.2407 5.43991 8.2407 5.22428C8.2407 5.00926 8.07535 4.83464 7.87136 4.83464C7.66696 4.83464 7.50154 5.00928 7.50154 5.22428ZM10.5942 5.58301C10.6394 5.60275 10.6878 5.61308 10.7367 5.61342V5.61393C10.9408 5.61393 11.1061 5.43991 11.1061 5.22428C11.1061 5.00926 10.9407 4.83464 10.7367 4.83464C10.5328 4.83464 10.3664 5.00928 10.3664 5.22428C10.3661 5.27504 10.3754 5.32537 10.3938 5.37239C10.4122 5.41942 10.4394 5.46223 10.4738 5.49837C10.5082 5.5345 10.5491 5.56326 10.5942 5.58301Z",
+    fill: "black"
+  })));
+}
+
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgIcoAndroidApp);
+export default __webpack_public_path__ + "static/media/ico-Android-app.c2aff21b.svg";
+export { ForwardRef as ReactComponent };

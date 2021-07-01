@@ -1,0 +1,39 @@
+var _path, _path2;
+
+var _excluded = ["title", "titleId"];
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+import * as React from "react";
+
+function SvgProfileActivated(_ref, svgRef) {
+  var title = _ref.title,
+      titleId = _ref.titleId,
+      props = _objectWithoutProperties(_ref, _excluded);
+
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    d: "M19.3764 20.1099C19.0364 18.7999 18.3564 17.5799 17.3864 16.6099C15.9564 15.1799 14.0164 14.3799 11.9964 14.3799C9.97644 14.3799 8.03644 15.1799 6.60644 16.6099C5.62644 17.5899 4.94644 18.7999 4.61644 20.1099C4.35644 21.1299 5.22644 21.9999 6.27644 21.9999H17.7064C18.7564 21.9999 19.6364 21.1299 19.3764 20.1099Z",
+    fill: "#CC0000"
+  })), _path2 || (_path2 = /*#__PURE__*/React.createElement("path", {
+    d: "M11.9918 13.4213C15.1454 13.4213 17.7019 10.8647 17.7019 7.71112C17.7019 4.5575 15.1454 2.00098 11.9918 2.00098C8.83814 2.00098 6.28162 4.5575 6.28162 7.71112C6.28162 10.8647 8.83814 13.4213 11.9918 13.4213Z",
+    fill: "#CC0000"
+  })));
+}
+
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgProfileActivated);
+export default __webpack_public_path__ + "static/media/profile_activated.d70dfce0.svg";
+export { ForwardRef as ReactComponent };

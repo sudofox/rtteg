@@ -1,0 +1,36 @@
+var _path;
+
+var _excluded = ["title", "titleId"];
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+import * as React from "react";
+
+function SvgQuote(_ref, svgRef) {
+  var title = _ref.title,
+      titleId = _ref.titleId,
+      props = _objectWithoutProperties(_ref, _excluded);
+
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    width: 20,
+    height: 20,
+    viewBox: "0 0 20 20",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    d: "M10.8372 5.19872L14.7772 9.13957L5.58214 18.3337H1.64221V14.3928L10.8372 5.19779V5.19872ZM12.1505 3.88541L14.1205 1.91452C14.2947 1.74039 14.5309 1.64258 14.7772 1.64258C15.0234 1.64258 15.2596 1.74039 15.4338 1.91452L18.0614 4.54206C18.2355 4.71624 18.3333 4.95243 18.3333 5.19872C18.3333 5.445 18.2355 5.6812 18.0614 5.85537L16.0905 7.82533L12.1505 3.88541Z",
+    fill: "currentColor"
+  })));
+}
+
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgQuote);
+export default __webpack_public_path__ + "static/media/quote.b77f3716.svg";
+export { ForwardRef as ReactComponent };

@@ -1,0 +1,44 @@
+var _path, _path2;
+
+var _excluded = ["title", "titleId"];
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+import * as React from "react";
+
+function SvgCheckRound(_ref, svgRef) {
+  var title = _ref.title,
+      titleId = _ref.titleId,
+      props = _objectWithoutProperties(_ref, _excluded);
+
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    viewBox: "0 0 20 20",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    d: "M10.0002 19.1668C11.8132 19.1668 13.5854 18.6292 15.0929 17.622C16.6003 16.6147 17.7753 15.1831 18.4691 13.5081C19.1629 11.8331 19.3444 9.98999 18.9907 8.21183C18.637 6.43367 17.764 4.80034 16.482 3.51836C15.2 2.23638 13.5667 1.36333 11.7885 1.00964C10.0103 0.655937 8.16722 0.837468 6.49223 1.53127C4.81724 2.22507 3.3856 3.39999 2.37836 4.90744C1.37111 6.41489 0.833496 8.18717 0.833496 10.0002C0.833496 12.4313 1.79927 14.7629 3.51835 16.482C5.23743 18.2011 7.56901 19.1668 10.0002 19.1668Z",
+    fill: "#0F6CF6",
+    stroke: "#0F6CF6",
+    strokeWidth: 1.2,
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  })), _path2 || (_path2 = /*#__PURE__*/React.createElement("path", {
+    d: "M14.0106 7.13574L8.68245 12.8649L5.98975 10.2581",
+    stroke: "white",
+    strokeWidth: 1.2,
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  })));
+}
+
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgCheckRound);
+export default __webpack_public_path__ + "static/media/checkRound.f881bad8.svg";
+export { ForwardRef as ReactComponent };

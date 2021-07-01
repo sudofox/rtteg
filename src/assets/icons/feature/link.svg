@@ -1,0 +1,45 @@
+var _g, _defs;
+
+var _excluded = ["title", "titleId"];
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+import * as React from "react";
+
+function SvgLink(_ref, svgRef) {
+  var title = _ref.title,
+      titleId = _ref.titleId,
+      props = _objectWithoutProperties(_ref, _excluded);
+
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    width: 18,
+    height: 19,
+    viewBox: "0 0 18 19",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _g || (_g = /*#__PURE__*/React.createElement("g", {
+    clipPath: "url(#clip0)"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M11.2614 14.3102C10.8473 14.3102 10.5116 13.9744 10.5116 13.5603C10.5116 13.1461 10.8473 12.8104 11.2614 12.8104H12.0113C12.4053 12.8104 12.7954 12.7328 13.1594 12.582C13.5234 12.4313 13.8541 12.2103 14.1327 11.9317C14.4113 11.6531 14.6323 11.3224 14.783 10.9584C14.9338 10.5944 15.0114 10.2043 15.0114 9.81033C15.0114 9.41635 14.9338 9.02623 14.783 8.66225C14.6323 8.29826 14.4113 7.96754 14.1327 7.68895C13.8541 7.41037 13.5234 7.18939 13.1594 7.03862C12.7954 6.88785 12.4053 6.81025 12.0113 6.81025L11.2614 6.81025C10.8473 6.81025 10.5116 6.47451 10.5116 6.06036C10.5116 5.64621 10.8473 5.31048 11.2614 5.31048L12.0113 5.31048C13.1984 5.32014 14.3336 5.79849 15.1696 6.64133C16.0056 7.48417 16.4747 8.6232 16.4747 9.81033C16.4747 10.9975 16.0056 12.1365 15.1696 12.9793C14.3336 13.8222 13.1984 14.3005 12.0113 14.3102L11.2614 14.3102ZM7.51095 13.5603C7.51095 13.9744 7.17522 14.3102 6.76107 14.3102H6.01118C5.41717 14.315 4.82807 14.2022 4.27788 13.9782C3.72769 13.7543 3.22729 13.4236 2.80554 13.0052C2.38378 12.5869 2.04903 12.0892 1.82059 11.5409C1.59215 10.9925 1.47453 10.4044 1.47453 9.81033C1.47453 9.2163 1.59215 8.62814 1.82059 8.07979C2.04903 7.53144 2.38378 7.03375 2.80553 6.61542C3.22729 6.19709 3.72769 5.8664 4.27788 5.64243C4.82807 5.41846 5.41717 5.30564 6.01118 5.31048H6.76107C7.17522 5.31048 7.51095 5.64621 7.51095 6.06036C7.51095 6.47451 7.17522 6.81025 6.76107 6.81025L6.01118 6.81025C5.6172 6.81025 5.22709 6.88785 4.8631 7.03862C4.49911 7.18939 4.16839 7.41037 3.8898 7.68895C3.61122 7.96754 3.39024 8.29826 3.23947 8.66225C3.0887 9.02623 3.0111 9.41635 3.0111 9.81033C3.0111 10.2043 3.0887 10.5944 3.23947 10.9584C3.39024 11.3224 3.61122 11.6531 3.8898 11.9317C4.16839 12.2103 4.49911 12.4313 4.8631 12.582C5.22709 12.7328 5.6172 12.8104 6.01118 12.8104L6.76106 12.8104C7.17522 12.8104 7.51095 13.1461 7.51095 13.5603ZM12.0108 9.05991C12.4253 9.05991 12.7612 9.39587 12.7612 9.8103C12.7612 10.2248 12.4252 10.5607 12.0108 10.5607L6.01168 10.5603C5.59749 10.5602 5.2617 10.2245 5.26156 9.81035C5.26141 9.39594 5.59732 9.05991 6.01174 9.05991L12.0108 9.05991Z",
+    fill: "#5C7192"
+  }))), _defs || (_defs = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("clipPath", {
+    id: "clip0"
+  }, /*#__PURE__*/React.createElement("rect", {
+    width: 18,
+    height: 18,
+    fill: "white",
+    transform: "translate(0 0.78418)"
+  })))));
+}
+
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgLink);
+export default __webpack_public_path__ + "static/media/link.4830ca99.svg";
+export { ForwardRef as ReactComponent };

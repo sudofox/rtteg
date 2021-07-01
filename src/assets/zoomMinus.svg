@@ -1,0 +1,51 @@
+var _path, _path2, _path3;
+
+var _excluded = ["title", "titleId"];
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+import * as React from "react";
+
+function SvgZoomMinus(_ref, svgRef) {
+  var title = _ref.title,
+      titleId = _ref.titleId,
+      props = _objectWithoutProperties(_ref, _excluded);
+
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    d: "M11.0034 18.9987C12.5865 18.9987 14.1341 18.5294 15.4504 17.6501C16.7666 16.7709 17.7924 15.5213 18.398 14.0593C19.0036 12.5973 19.1618 10.9886 18.8525 9.43673C18.5433 7.88487 17.7805 6.45953 16.6607 5.34102C15.5408 4.22251 14.1143 3.46108 12.5614 3.15304C11.0085 2.845 9.39916 3.0042 7.93683 3.61048C6.4745 4.21677 5.22493 5.24291 4.34616 6.55911C3.4674 7.87531 2.99892 9.42243 3 11.0048C3 12.055 3.20705 13.0949 3.60933 14.0652C4.0116 15.0354 4.60121 15.9169 5.34446 16.6592C6.08772 17.4016 6.97005 17.9903 7.94103 18.3917C8.91201 18.7931 9.95262 18.9994 11.0034 18.9987V18.9987Z",
+    stroke: "#657786",
+    strokeWidth: 1.2,
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  })), _path2 || (_path2 = /*#__PURE__*/React.createElement("path", {
+    d: "M21.0032 20.9997L17 17.0088",
+    stroke: "#657786",
+    strokeWidth: 1.2,
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  })), _path3 || (_path3 = /*#__PURE__*/React.createElement("path", {
+    d: "M8.0459 10.9121H13.7743",
+    stroke: "#657786",
+    strokeWidth: 1.2,
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  })));
+}
+
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgZoomMinus);
+export default __webpack_public_path__ + "static/media/zoomMinus.8d8ab8ba.svg";
+export { ForwardRef as ReactComponent };

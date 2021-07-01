@@ -1,0 +1,36 @@
+var _path;
+
+var _excluded = ["title", "titleId"];
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+import * as React from "react";
+
+function SvgSearch(_ref, svgRef) {
+  var title = _ref.title,
+      titleId = _ref.titleId,
+      props = _objectWithoutProperties(_ref, _excluded);
+
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    d: "M20.85 19.15L16.43 14.73C17.41 13.41 18 11.77 18 10C18 5.59 14.41 2 10 2C5.59 2 2 5.59 2 10C2 14.41 5.59 18 10 18C11.77 18 13.41 17.41 14.74 16.43L19.16 20.85C19.39 21.08 19.7 21.2 20.01 21.2C20.32 21.2 20.62 21.08 20.86 20.85C21.32 20.38 21.32 19.62 20.85 19.15ZM4.4 10C4.4 6.91 6.91 4.4 10 4.4C13.09 4.4 15.6 6.91 15.6 10C15.6 13.09 13.09 15.6 10 15.6C6.91 15.6 4.4 13.09 4.4 10Z",
+    fill: "#6E7187"
+  })));
+}
+
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgSearch);
+export default __webpack_public_path__ + "static/media/search.55cfe90f.svg";
+export { ForwardRef as ReactComponent };

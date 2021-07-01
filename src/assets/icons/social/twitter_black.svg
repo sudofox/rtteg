@@ -1,0 +1,38 @@
+var _path;
+
+var _excluded = ["title", "titleId"];
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+import * as React from "react";
+
+function SvgTwitterBlack(_ref, svgRef) {
+  var title = _ref.title,
+      titleId = _ref.titleId,
+      props = _objectWithoutProperties(_ref, _excluded);
+
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    width: 20,
+    height: 20,
+    viewBox: "0 0 20 20",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    clipRule: "evenodd",
+    d: "M10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0ZM14.8599 7.0369C15.3857 6.97228 15.8901 6.83921 16.3633 6.63844C16.0086 7.14921 15.5735 7.59305 15.0556 7.94844C15.0612 8.05536 15.0652 8.16305 15.0652 8.27459C15.0652 11.6084 12.4402 15.4546 7.63881 15.4546C6.16165 15.4546 4.79187 15.0431 3.63608 14.3223C3.84131 14.3477 4.04653 14.3569 4.26051 14.3569C5.48074 14.3569 6.6079 13.9523 7.49562 13.2807C6.35494 13.2569 5.39562 12.5223 5.05756 11.5231C5.21585 11.5569 5.38449 11.5661 5.55153 11.5661C5.79176 11.5661 6.02324 11.5392 6.23562 11.4831C5.0496 11.2484 4.14517 10.23 4.14517 9.00382V8.97613C4.49358 9.16151 4.90483 9.27921 5.32403 9.2869C4.6304 8.83844 4.16506 8.06382 4.16506 7.18997C4.16506 6.72459 4.2971 6.29228 4.52221 5.91459C5.81165 7.44613 7.73108 8.45151 9.90028 8.55382C9.85733 8.37074 9.83983 8.17844 9.83983 7.97844C9.83983 6.58844 11.0028 5.45459 12.4473 5.45459C13.1919 5.45459 13.8744 5.75997 14.3532 6.25305C14.9466 6.13844 15.5035 5.93305 16.0078 5.64228C15.8137 6.23382 15.4009 6.72459 14.8599 7.0369Z",
+    fill: "black"
+  })));
+}
+
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgTwitterBlack);
+export default __webpack_public_path__ + "static/media/twitter_black.8c065b70.svg";
+export { ForwardRef as ReactComponent };

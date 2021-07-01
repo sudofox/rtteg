@@ -1,0 +1,18 @@
+export const timelineConstants = {
+  MAX_BATCH_SIZE: 20,
+  LOAD_MORE_CUTOFF_SIZE: 15,
+  HEADER_HEIGHT: 0,
+  OTHERS_HEIGHT: 200,
+  DIRECTION_FORWARD: "fwd",
+  DIRECTION_REVERSED: "rev",
+  BELOW: "below",
+  ABOVE: "above",
+  INSIDE: "inside",
+  NUMBER_HIDDEN_ITEMS: 6,
+  LOAD_MORE_DISPLAY_CUTOFF_SIZE: 6,
+  SCROLL_TYPE_DOWN: "scroll_type_down",
+  SCROLL_TYPE_UP: "scroll_type_up",
+  extraHeight: 2000,
+  FEED_ITEM_MARGIN_BOTTOM: 16,
+  SCROLL_CUTOFF: 4500,
+};

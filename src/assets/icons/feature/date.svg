@@ -1,0 +1,36 @@
+var _path;
+
+var _excluded = ["title", "titleId"];
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+import * as React from "react";
+
+function SvgDate(_ref, svgRef) {
+  var title = _ref.title,
+      titleId = _ref.titleId,
+      props = _objectWithoutProperties(_ref, _excluded);
+
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    d: "M9.3 3V4.8H14.7V3H16.5V4.8H20.1C20.3387 4.8 20.5676 4.89482 20.7364 5.0636C20.9052 5.23239 21 5.46131 21 5.7V20.1C21 20.3387 20.9052 20.5676 20.7364 20.7364C20.5676 20.9052 20.3387 21 20.1 21H3.9C3.66131 21 3.43239 20.9052 3.2636 20.7364C3.09482 20.5676 3 20.3387 3 20.1V5.7C3 5.46131 3.09482 5.23239 3.2636 5.0636C3.43239 4.89482 3.66131 4.8 3.9 4.8H7.5V3H9.3ZM19.2 9.3H4.8V19.2H19.2V9.3ZM14.0961 11.8588C14.4475 11.5074 15.0173 11.5073 15.3687 11.8587C15.7201 12.2101 15.7201 12.7799 15.3687 13.1313L11.55 16.95L9.00473 14.4047C8.65292 14.0529 8.65312 13.4825 9.00518 13.1309C9.35693 12.7797 9.9268 12.7799 10.2782 13.1315L11.5509 14.4048L14.0961 11.8588Z",
+    fill: "black"
+  })));
+}
+
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgDate);
+export default __webpack_public_path__ + "static/media/date.ed6f6208.svg";
+export { ForwardRef as ReactComponent };

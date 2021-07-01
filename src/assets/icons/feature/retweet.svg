@@ -1,0 +1,36 @@
+var _path;
+
+var _excluded = ["title", "titleId"];
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+import * as React from "react";
+
+function SvgRetweet(_ref, svgRef) {
+  var title = _ref.title,
+      titleId = _ref.titleId,
+      props = _objectWithoutProperties(_ref, _excluded);
+
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    width: 16,
+    height: 15,
+    viewBox: "0 0 16 15",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    d: "M10.5 5.51825V5.50215H5.51594V7.49708C5.51594 7.77333 5.2921 7.99726 5.01595 7.99726C4.8963 7.99727 4.78062 7.95435 4.6899 7.87631L0.673977 4.42113C0.464634 4.24099 0.44085 3.92518 0.620925 3.71574C0.635921 3.69829 0.652105 3.6819 0.66936 3.66669L4.6853 0.12499C4.89244 -0.0576901 5.20839 -0.037798 5.391 0.169426C5.47151 0.260786 5.51594 0.378393 5.51594 0.500187V2.50096H11C12.933 2.50096 14.5 4.18054 14.5 5.96386C14.5001 6.12506 14.4926 6.28617 14.4776 6.44667C13.5777 5.85079 12.3515 5.50214 11 5.50214C10.8332 5.50211 10.6664 5.50749 10.4999 5.51825H10.5ZM5.49999 9.48176V9.49787H10.484V7.50293C10.484 7.22669 10.7079 7.00273 10.984 7.00273C11.1037 7.00272 11.2194 7.04565 11.3101 7.1237L15.326 10.5789C15.5354 10.759 15.5591 11.0748 15.3791 11.2843C15.3641 11.3017 15.3479 11.3181 15.3306 11.3333L11.3146 14.875C11.1075 15.0577 10.7916 15.0378 10.6089 14.8306C10.5284 14.7392 10.484 14.6216 10.484 14.4998V12.499H5.00002C3.06704 12.499 1.50002 10.8194 1.50002 9.03611C1.49994 8.87492 1.50741 8.7138 1.52242 8.5533C2.42229 9.14918 3.64854 9.49783 5.00003 9.49783C5.16682 9.49787 5.33357 9.4925 5.50001 9.48173L5.49999 9.48176Z",
+    fill: "currentColor"
+  })));
+}
+
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgRetweet);
+export default __webpack_public_path__ + "static/media/retweet.5d9c1d17.svg";
+export { ForwardRef as ReactComponent };

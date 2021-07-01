@@ -1,0 +1,49 @@
+var _path, _path2, _path3;
+
+var _excluded = ["title", "titleId"];
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+import * as React from "react";
+
+function SvgIcoAccountHelp(_ref, svgRef) {
+  var title = _ref.title,
+      titleId = _ref.titleId,
+      props = _objectWithoutProperties(_ref, _excluded);
+
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    width: 20,
+    height: 20,
+    viewBox: "0 0 20 20",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    d: "M15.3333 1.25C16.9902 1.25 18.3333 2.59315 18.3333 4.25L18.3333 15.75C18.3333 17.4069 16.9902 18.75 15.3333 18.75L4.66665 18.75C3.00979 18.75 1.66665 17.4069 1.66665 15.75L1.66665 4.25C1.66665 2.59315 3.00979 1.25 4.66665 1.25L15.3333 1.25Z",
+    stroke: "black",
+    strokeWidth: 1.2,
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  })), _path2 || (_path2 = /*#__PURE__*/React.createElement("path", {
+    d: "M6.25 7.5L13.75 7.5",
+    stroke: "black",
+    strokeWidth: 1.2,
+    strokeLinecap: "round"
+  })), _path3 || (_path3 = /*#__PURE__*/React.createElement("path", {
+    d: "M6.25 12.5H10.4167",
+    stroke: "black",
+    strokeWidth: 1.2,
+    strokeLinecap: "round"
+  })));
+}
+
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgIcoAccountHelp);
+export default __webpack_public_path__ + "static/media/ico-account-help.e246090a.svg";
+export { ForwardRef as ReactComponent };

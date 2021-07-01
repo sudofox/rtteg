@@ -1,0 +1,1 @@
+export default __webpack_public_path__ + "static/media/terms.839f6e8a.md";

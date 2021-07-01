@@ -1,0 +1,42 @@
+var _path, _path2;
+
+var _excluded = ["title", "titleId"];
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+import * as React from "react";
+
+function SvgIcoAccountSettings(_ref, svgRef) {
+  var title = _ref.title,
+      titleId = _ref.titleId,
+      props = _objectWithoutProperties(_ref, _excluded);
+
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    width: 20,
+    height: 20,
+    viewBox: "0 0 20 20",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    d: "M0.959885 8.43925C0.877985 8.95035 0.835266 9.47494 0.835266 10.0104C0.835266 10.5457 0.877853 11.0697 0.959252 11.5796C1.03499 12.054 1.48001 12.3522 1.94471 12.4742C2.16527 12.5321 2.37909 12.6185 2.58097 12.7321C3.02699 12.983 3.39741 13.3571 3.65123 13.8129C3.90506 14.2687 4.0324 14.7885 4.01916 15.3147C4.01262 15.575 3.9718 15.8319 3.89876 16.0785C3.76751 16.5216 3.80052 17.0318 4.15072 17.3333C4.92964 18.004 5.81031 18.5359 6.75668 18.9076C7.20805 19.0849 7.69277 18.8436 8.02316 18.4886C8.18356 18.3163 8.36499 18.1648 8.56369 18.0383C8.99633 17.763 9.49395 17.6173 10.0015 17.6173C10.509 17.6173 11.0066 17.763 11.4393 18.0383C11.638 18.1648 11.8194 18.3163 11.9798 18.4886C12.3102 18.8436 12.7949 19.0849 13.2463 18.9076C14.1927 18.5359 15.0735 18.0039 15.8525 17.3331C16.2025 17.0317 16.2356 16.5216 16.1046 16.0787C16.0316 15.8321 15.9909 15.5753 15.9844 15.315C15.9713 14.7889 16.0987 14.2693 16.3525 13.8136C16.6063 13.358 16.9766 12.984 17.4224 12.7331C17.6244 12.6195 17.8383 12.5331 18.0589 12.4752C18.5233 12.3532 18.9681 12.0554 19.044 11.5813C19.1259 11.0703 19.1686 10.5458 19.1686 10.0104C19.1686 9.47526 19.1259 8.95097 19.0441 8.44043C18.9682 7.96633 18.5234 7.66863 18.0589 7.54681C17.8381 7.48889 17.6241 7.40248 17.422 7.28877C16.976 7.03783 16.6055 6.66375 16.3517 6.20794C16.0979 5.75213 15.9706 5.23236 15.9838 4.70612C15.9903 4.44581 16.0312 4.18893 16.1042 3.94236C16.2354 3.49928 16.2024 2.98899 15.8522 2.68748C15.0733 2.01685 14.1926 1.48488 13.2463 1.11319C12.7949 0.935904 12.3102 1.17727 11.9798 1.53224C11.8194 1.70458 11.638 1.85608 11.4393 1.98251C11.0066 2.2578 10.509 2.4035 10.0015 2.4035C9.49395 2.4035 8.99633 2.2578 8.56369 1.98251C8.36499 1.85608 8.18356 1.70458 8.02316 1.53224C7.69277 1.17727 7.20805 0.935904 6.75668 1.11319C5.8102 1.48493 4.92944 2.01697 4.15046 2.68771C3.80039 2.98913 3.76729 3.4992 3.89836 3.94216C3.97129 4.18865 4.01203 4.44541 4.01853 4.7056C4.03166 5.2316 3.90436 5.75112 3.65068 6.20674C3.397 6.66236 3.02683 7.03632 2.58109 7.2873C2.37916 7.401 2.16529 7.48745 1.94465 7.54544C1.48038 7.66746 1.03584 7.96527 0.959885 8.43925Z",
+    stroke: "black",
+    strokeWidth: 1.2
+  })), _path2 || (_path2 = /*#__PURE__*/React.createElement("path", {
+    d: "M9.99896 12.7589C9.45372 12.7589 8.92073 12.5971 8.46738 12.294C8.01403 11.9909 7.6607 11.5601 7.45205 11.0561C7.24339 10.5521 7.18878 9.99747 7.29515 9.4624C7.40153 8.92734 7.66409 8.43585 8.04963 8.05009C8.43517 7.66433 8.92639 7.40162 9.46115 7.29519C9.99591 7.18876 10.5502 7.24338 11.0539 7.45215C11.5577 7.66093 11.9882 8.01447 12.2911 8.46808C12.594 8.92168 12.7557 9.45498 12.7557 10.0005C12.7557 10.3628 12.6844 10.7214 12.5459 11.0561C12.4073 11.3907 12.2043 11.6948 11.9483 11.951C11.6923 12.2071 11.3884 12.4103 11.0539 12.5489C10.7195 12.6875 10.361 12.7589 9.99896 12.7589Z",
+    stroke: "black",
+    strokeWidth: 1.2,
+    strokeMiterlimit: 10
+  })));
+}
+
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgIcoAccountSettings);
+export default __webpack_public_path__ + "static/media/ico-account-settings.249c7a4e.svg";
+export { ForwardRef as ReactComponent };

@@ -1,0 +1,51 @@
+var _path, _path2, _path3;
+
+var _excluded = ["title", "titleId"];
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+import * as React from "react";
+
+function SvgIcoUnmute(_ref, svgRef) {
+  var title = _ref.title,
+      titleId = _ref.titleId,
+      props = _objectWithoutProperties(_ref, _excluded);
+
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    width: 20,
+    height: 20,
+    viewBox: "0 0 20 20",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    clipRule: "evenodd",
+    d: "M10.4428 2.30766C10.6977 2.06581 11.1182 2.24647 11.1182 2.59781L11.1182 17.4464C11.1182 17.7909 10.7116 17.9743 10.4534 17.7462L5.50867 13.3784H1.83408C1.2818 13.3784 0.834083 12.9307 0.834083 12.3784V7.99024C0.834083 7.43795 1.2818 6.99024 1.83408 6.99024L5.50867 6.99024L10.4428 2.30766Z",
+    stroke: "black",
+    strokeWidth: 1.2,
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  })), _path2 || (_path2 = /*#__PURE__*/React.createElement("path", {
+    d: "M13.9229 13.7684C15.8729 11.8183 15.8729 8.23913 13.9229 6.28906",
+    stroke: "black",
+    strokeWidth: 1.2,
+    strokeLinecap: "round"
+  })), _path3 || (_path3 = /*#__PURE__*/React.createElement("path", {
+    d: "M16.7275 16.5732C20.4537 12.8471 20.4744 7.23122 16.7275 3.48438",
+    stroke: "black",
+    strokeWidth: 1.2,
+    strokeLinecap: "round"
+  })));
+}
+
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgIcoUnmute);
+export default __webpack_public_path__ + "static/media/ico-unmute.829a3b8d.svg";
+export { ForwardRef as ReactComponent };

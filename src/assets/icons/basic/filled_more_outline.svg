@@ -1,0 +1,42 @@
+var _circle, _path;
+
+var _excluded = ["title", "titleId"];
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+import * as React from "react";
+
+function SvgFilledMoreOutline(_ref, svgRef) {
+  var title = _ref.title,
+      titleId = _ref.titleId,
+      props = _objectWithoutProperties(_ref, _excluded);
+
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    width: 42,
+    height: 43,
+    viewBox: "0 0 42 43",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _circle || (_circle = /*#__PURE__*/React.createElement("circle", {
+    cx: 21,
+    cy: 21.2842,
+    r: 16.5,
+    stroke: "black",
+    strokeWidth: 2
+  })), _path || (_path = /*#__PURE__*/React.createElement("path", {
+    d: "M12.5417 23.3259C11.4188 23.3259 10.5 22.4072 10.5 21.2843C10.5 20.1613 11.4188 19.2426 12.5417 19.2426C13.6646 19.2426 14.5833 20.1613 14.5833 21.2843C14.5833 22.4072 13.6646 23.3259 12.5417 23.3259ZM29.4583 23.3259C28.3354 23.3259 27.4167 22.4072 27.4167 21.2843C27.4167 20.1613 28.3354 19.2426 29.4583 19.2426C30.5813 19.2426 31.5 20.1613 31.5 21.2843C31.5 22.4072 30.5813 23.3259 29.4583 23.3259ZM21 23.3259C19.8771 23.3259 18.9583 22.4072 18.9583 21.2843C18.9583 20.1613 19.8771 19.2426 21 19.2426C22.1229 19.2426 23.0417 20.1613 23.0417 21.2843C23.0417 22.4072 22.1229 23.3259 21 23.3259Z",
+    fill: "black"
+  })));
+}
+
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgFilledMoreOutline);
+export default __webpack_public_path__ + "static/media/filled_more_outline.ab69bbc6.svg";
+export { ForwardRef as ReactComponent };
